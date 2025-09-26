@@ -1,4 +1,4 @@
-# Care Transition Companion (CTC)
+# Shifa AI - Care Transition Companion (CTC)
 
 A YC-ready MVP for reducing 30-day readmissions by automating post-discharge follow-ups via SMS/voice, triaging risk from patient replies, and alerting the care team.
 
@@ -82,6 +82,11 @@ docker compose exec api python scripts/seed_data.py
 - **Real-time**: Auto-refresh for alerts and metrics
 - **Responsive**: Mobile-friendly design
 
+### Marketing Website (Next.js)
+- **Shifa AI Website**: Professional marketing site
+- **Demo Requests**: Lead capture and conversion
+- **SEO Optimized**: Production-ready marketing
+
 ### External Services
 - **Twilio**: SMS sending/receiving
 - **OpenAI/Anthropic**: AI-powered triage
@@ -137,7 +142,7 @@ docker compose exec api python scripts/seed_data.py
 - **Consent**: Opt-out mechanism via SMS
 - **Retention**: Configurable data retention
 
-## 📊 Metrics & Monitoring
+## �� Metrics & Monitoring
 
 ### Key Metrics
 - Enrollment count (7-day)
@@ -236,7 +241,7 @@ alembic downgrade -1
 
 ## 📝 License
 
-Proprietary - Care Transition Companion MVP
+Proprietary - Shifa AI Care Transition Companion MVP
 
 ## 🤝 Support
 
