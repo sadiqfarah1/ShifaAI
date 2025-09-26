@@ -1,0 +1,39 @@
+# Development files
+.env
+.env.sample
+docker-compose.yml
+Dockerfile
+start.sh
+.streamlit/
+
+# Documentation
+README.md
+*.md
+
+# Tests
+tests/
+test_*
+
+# Development tools
+.vscode/
+.idea/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Frontend (we'll deploy separately)
+frontend/
+shifa-website/
+
+# Logs
+*.log
+logs/
