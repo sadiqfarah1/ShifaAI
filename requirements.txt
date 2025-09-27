@@ -28,9 +28,9 @@ redis==5.0.1
 streamlit==1.28.1
 plotly==5.17.0
 
-# Utilities - Use older, more stable versions
-pydantic==2.3.0
-pydantic-settings==2.0.2
+# Utilities - Use very old versions that have pre-compiled wheels
+pydantic==1.10.12
+pydantic-settings==1.10.1
 python-dotenv==1.0.0
 httpx==0.25.2
 jinja2==3.1.2
