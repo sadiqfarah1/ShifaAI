@@ -28,8 +28,8 @@ redis==5.0.1
 streamlit==1.28.1
 plotly==5.17.0
 
-# Utilities - Use Pydantic v1 with correct pydantic-settings version
-pydantic==1.10.12
+# Utilities - Use Pydantic v2 with pre-compiled wheels
+pydantic==2.1.1
 pydantic-settings==2.0.2
 python-dotenv==1.0.0
 httpx==0.25.2
