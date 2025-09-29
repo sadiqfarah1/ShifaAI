@@ -10,7 +10,7 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-export function Layout({ children }: React.ReactNode) {
+export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-background text-text-primary antialiased">
       <Header />
@@ -54,6 +54,7 @@ function Header() {
             {navLink("/why", "Why It Matters")}
             {navLink("/who", "Who We Help")}
             {navLink("/about", "Our Mission")}
+            {navLink("/safety", "Safety & Ethics")}
             <Link href="/contact" className="btn-primary">
               Join Pilot
             </Link>
@@ -76,6 +77,7 @@ function Header() {
               {navLink("/why", "Why It Matters")}
               {navLink("/who", "Who We Help")}
               {navLink("/about", "Our Mission")}
+              {navLink("/safety", "Safety & Ethics")}
               <Link href="/contact" className="btn-primary w-full text-center block">
                 Join Pilot
               </Link>
@@ -116,6 +118,7 @@ function Footer() {
             <h3 className="font-semibold text-text-primary mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-primary transition-colors">Our Mission</Link></li>
+              <li><Link href="/safety" className="hover:text-primary transition-colors">Safety & Ethics</Link></li>
               <li><a href="mailto:hello@shifa-ai.com" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Privacy</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Terms</a></li>
