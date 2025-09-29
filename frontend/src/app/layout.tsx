@@ -1,30 +1,44 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "../styles/globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans"
+})
 
 export const metadata: Metadata = {
-  title: "Shifa AI - Reduce Hospital Readmissions with AI-Powered Care Transition",
-  description: "Reduce costly hospital readmissions by 40% with automated follow-ups, AI triage, and real-time care team alerts. Trusted by 200+ healthcare organizations.",
-  keywords: "hospital readmissions, AI healthcare, care transition, patient monitoring, healthcare AI, readmission reduction",
+  title: {
+    default: "Shifa AI - Healing beyond discharge",
+    template: "%s | Shifa AI"
+  },
+  description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts. Trusted by 200+ healthcare organizations.",
+  keywords: [
+    "hospital readmissions",
+    "AI healthcare", 
+    "care transition",
+    "patient monitoring",
+    "healthcare AI",
+    "readmission reduction",
+    "post-discharge care",
+    "nurse alerts",
+    "AI triage"
+  ],
   authors: [{ name: "Shifa AI" }],
   creator: "Shifa AI",
   publisher: "Shifa AI",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   metadataBase: new URL("https://shifa-ai-tau.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Shifa AI - Reduce Hospital Readmissions with AI-Powered Care Transition",
-    description: "Reduce costly hospital readmissions by 40% with automated follow-ups, AI triage, and real-time care team alerts.",
+    type: "website",
+    locale: "en_US",
     url: "https://shifa-ai-tau.vercel.app",
     siteName: "Shifa AI",
+    title: "Shifa AI - Healing beyond discharge",
+    description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts.",
     images: [
       {
         url: "/og-image.jpg",
@@ -33,13 +47,11 @@ export const metadata: Metadata = {
         alt: "Shifa AI - AI-Powered Care Transition Platform",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shifa AI - Reduce Hospital Readmissions with AI-Powered Care Transition",
-    description: "Reduce costly hospital readmissions by 40% with automated follow-ups, AI triage, and real-time care team alerts.",
+    title: "Shifa AI - Healing beyond discharge",
+    description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -64,14 +76,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={inter.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#0d9488" />
+        <meta name="theme-color" content="#0F766E" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className="min-h-screen bg-background font-sans antialiased">
         {children}
       </body>
     </html>
