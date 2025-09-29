@@ -5,20 +5,20 @@ export function ValuePillars() {
     {
       icon: TrendingDown,
       title: "Reduce readmissions",
-      description: "Catch risk early with AI triage and nurse alerts. Prevent costly readmissions before they happen.",
-      metric: "40% avg reduction"
+      description: "Catch risk early with AI triage and nurse alerts. Modeled to prevent costly readmissions before they happen.",
+      metric: "Modeled to reduce by 40%"
     },
     {
       icon: Users,
-      title: "Delight care teams", 
-      description: "One-click actions. No EHR integration to start. Simple workflows that nurses actually want to use.",
-      metric: "95% user satisfaction"
+      title: "Empower care teams", 
+      description: "One-click actions. No complex EHR integration to start. Simple workflows designed with clinical input.",
+      metric: "Built with clinicians"
     },
     {
       icon: BarChart3,
-      title: "Prove ROI fast",
+      title: "Prove impact fast",
       description: "Pilot in 30 days. Transparent metrics. Clear evidence of impact on patient outcomes and costs.",
-      metric: "$2.3M avg savings"
+      metric: "Pilot-ready platform"
     }
   ]
 
@@ -26,20 +26,19 @@ export function ValuePillars() {
     <section className="section bg-muted/30">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-section text-balance mb-4">
-            Why healthcare teams choose Shifa AI
+          <h2 className="text-section text-balance mb-6">
+            Why we're building this
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
-            Built by healthcare professionals, for healthcare professionals. 
-            Simple, secure, and proven to reduce readmissions.
+            Every year, over 3.8 million patients in the U.S. are readmitted to the hospital within 30 days — costing the healthcare system more than $26 billion annually. Most of these readmissions aren't caused by new conditions — they happen because patients don't get the right follow-up care after leaving the hospital.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 animate-stagger">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon
             return (
-              <div key={index} className="card p-8 text-center space-y-4 hover:shadow-lg transition-shadow">
+              <div key={index} className="card p-8 text-center space-y-4 hover-lift hover-glow">
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>

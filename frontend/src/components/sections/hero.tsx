@@ -12,21 +12,20 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-hero text-balance">
-                Healing beyond discharge.
+                Healing beyond discharge — powered by intelligent follow-up.
               </h1>
               <p className="text-lead text-balance max-w-2xl">
-                Reduce readmissions with automated follow-ups, AI triage, and nurse alerts. 
-                Prevent costly readmissions before they happen.
+                Shifa AI helps care teams reduce preventable readmissions with automated patient check-ins, AI-powered risk triage, and real-time nurse alerts. We're partnering with hospitals and care organizations to pilot the future of post-discharge care.
               </p>
             </div>
             
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/demo" className="btn-primary inline-flex items-center justify-center">
-                Request a demo
+              <Link href="#pilot" className="btn-primary inline-flex items-center justify-center">
+                Join Pilot
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link href="#how-it-works" className="btn-secondary">
-                See how it works
+              <Link href="#talk-to-us" className="btn-secondary">
+                Talk to Us
               </Link>
             </div>
 
@@ -38,11 +37,11 @@ export function Hero() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Users className="h-4 w-4" />
-                <span>200+ hospitals</span>
+                <span>Designed with clinicians</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <TrendingDown className="h-4 w-4" />
-                <span>40% avg reduction</span>
+                <span>Modeled to reduce by 40%</span>
               </div>
             </div>
           </div>
@@ -105,7 +104,7 @@ export function Hero() {
               {/* Footer */}
               <div className="text-center pt-2">
                 <p className="text-xs text-muted-foreground">
-                  AI triage accuracy: 95.2% • Last updated: 2 minutes ago
+                  AI triage in development • Last updated: 2 minutes ago
                 </p>
               </div>
             </div>

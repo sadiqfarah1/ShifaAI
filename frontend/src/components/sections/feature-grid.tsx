@@ -14,13 +14,13 @@ export function FeatureGrid() {
       icon: MessageSquare,
       title: "Automated follow-ups",
       description: "Personalized SMS messages sent at optimal intervals based on patient risk profile and clinical guidelines.",
-      benefits: ["98% delivery rate", "Multi-language support", "Customizable templates"]
+      benefits: ["High delivery rate", "Multi-language support", "Customizable templates"]
     },
     {
       icon: Brain,
       title: "AI triage",
       description: "Real-time analysis of patient responses with Green, Amber, Red risk classification and confidence scores.",
-      benefits: ["95% accuracy", "2-second processing", "Continuous learning"]
+      benefits: ["Designed for accuracy", "Fast processing", "Continuous learning"]
     },
     {
       icon: Bell,

@@ -9,13 +9,13 @@ export function TrustSection() {
     },
     {
       icon: CheckCircle,
-      title: "SOC 2 Type II",
-      description: "Independently audited security controls and data protection measures."
+      title: "Built with Clinicians",
+      description: "Designed in collaboration with healthcare professionals and care teams."
     },
     {
       icon: Users,
-      title: "200+ Hospitals",
-      description: "Trusted by healthcare organizations nationwide to reduce readmissions."
+      title: "Pilot Partners",
+      description: "Working with forward-thinking hospitals to validate our approach."
     }
   ]
 
@@ -24,10 +24,10 @@ export function TrustSection() {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-section text-balance mb-4">
-            Trusted by healthcare leaders
+            Built for healthcare, by healthcare
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
-            Built with healthcare-grade security and compliance from day one.
+            Our platform is designed with healthcare-grade security and clinical input from day one.
           </p>
         </div>
 
@@ -48,12 +48,12 @@ export function TrustSection() {
 
         {/* Logo cloud placeholder */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-8">Trusted by leading healthcare organizations</p>
+          <p className="text-sm text-muted-foreground mb-8">Early pilot partners</p>
           <div className="flex items-center justify-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold text-muted-foreground">Mercy Health</div>
-            <div className="text-2xl font-bold text-muted-foreground">Regional Medical</div>
-            <div className="text-2xl font-bold text-muted-foreground">St. Mary&apos;s</div>
-            <div className="text-2xl font-bold text-muted-foreground">City Hospital</div>
+            <div className="text-2xl font-bold text-muted-foreground">Coming Soon</div>
+            <div className="text-2xl font-bold text-muted-foreground">Pilot Partners</div>
+            <div className="text-2xl font-bold text-muted-foreground">Will Be</div>
+            <div className="text-2xl font-bold text-muted-foreground">Announced</div>
           </div>
         </div>
       </div>
