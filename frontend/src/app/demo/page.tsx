@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -21,7 +22,7 @@ export default function DemoPage() {
             Thank you for your interest in Shifa AI. Our team will contact you within 24 hours.
           </p>
           <Button asChild>
-            <a href="/">Return to Home</a>
+            <Link href="/">Return to Home</Link>
           </Button>
         </div>
       </div>
