@@ -1,7 +1,39 @@
-# Minimal FastAPI setup that works on Render
+# FastAPI and web framework
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 
-# Basic utilities
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# Authentication and security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==41.0.7
+
+# Twilio
+twilio==8.10.0
+
+# LLM
+openai==1.3.7
+anthropic==0.7.8
+
+# Scheduling
+apscheduler==3.10.4
+redis==5.0.1
+
+# Utilities
 python-dotenv==1.0.0
+httpx==0.25.2
+jinja2==3.1.2
+pyyaml==6.0.1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Development
+black==23.11.0
+isort==5.12.0
