@@ -33,23 +33,20 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/solutions/care-transitions" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Solutions
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Home
             </Link>
-            <Link href="/product" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Product
+            <Link href="/why" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Why We’re Building This
             </Link>
-            <Link href="/roi" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              ROI
+            <Link href="/who" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Who It’s For
             </Link>
-            <Link href="/pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
+            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              About Us
             </Link>
-            <Link href="/security" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Security
-            </Link>
-            <Link href="/demo" className="btn-primary">
-              Request a demo
+            <Link href="/contact" className="btn-primary">
+              Join Pilot
             </Link>
           </nav>
 
@@ -67,23 +64,20 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/solutions/care-transitions" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Solutions
+              <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Home
               </Link>
-              <Link href="/product" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Product
+              <Link href="/why" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Why We’re Building This
               </Link>
-              <Link href="/roi" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                ROI
+              <Link href="/who" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Who It’s For
               </Link>
-              <Link href="/pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Pricing
+              <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                About Us
               </Link>
-              <Link href="/security" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Security
-              </Link>
-              <Link href="/demo" className="btn-primary w-fit">
-                Request a demo
+              <Link href="/contact" className="btn-primary w-fit">
+                Join Pilot
               </Link>
             </nav>
           </div>
