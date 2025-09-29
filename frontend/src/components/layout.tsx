@@ -22,27 +22,27 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
       <div className="container">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Heart className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">Shifa AI</span>
+            <span className="text-xl font-bold text-text-primary">Shifa AI</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
               Home
             </Link>
-            <Link href="/why" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/why" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
               Why We’re Building This
             </Link>
-            <Link href="/who" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/who" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
               Who It’s For
             </Link>
-            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/about" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
               About Us
             </Link>
             <Link href="/contact" className="btn-primary">
@@ -64,16 +64,16 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
                 Home
               </Link>
-              <Link href="/why" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/why" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
                 Why We’re Building This
               </Link>
-              <Link href="/who" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/who" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
                 Who It’s For
               </Link>
-              <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/about" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
                 About Us
               </Link>
               <Link href="/contact" className="btn-primary w-fit">
@@ -89,7 +89,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="border-t border-slate-100 bg-surface text-text-secondary">
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Company */}
@@ -98,7 +98,7 @@ function Footer() {
               <Heart className="h-6 w-6 text-primary" />
               <span className="text-lg font-bold">Shifa AI</span>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-text-secondary">
               Healing beyond discharge. AI-powered care transition platform reducing hospital readmissions.
             </p>
           </div>
@@ -107,10 +107,10 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/solutions/care-transitions" className="text-muted-foreground hover:text-foreground transition-colors">Care Transitions</Link></li>
-              <li><Link href="/product" className="text-muted-foreground hover:text-foreground transition-colors">Features</Link></li>
-              <li><Link href="/roi" className="text-muted-foreground hover:text-foreground transition-colors">ROI Calculator</Link></li>
-              <li><Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link></li>
+              <li><Link href="/solutions/care-transitions" className="text-text-secondary hover:text-text-primary transition-colors">Care Transitions</Link></li>
+              <li><Link href="/product" className="text-text-secondary hover:text-text-primary transition-colors">Features</Link></li>
+              <li><Link href="/roi" className="text-text-secondary hover:text-text-primary transition-colors">ROI Calculator</Link></li>
+              <li><Link href="/pricing" className="text-text-secondary hover:text-text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
@@ -118,10 +118,10 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
-              <li><Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="text-text-secondary hover:text-text-primary transition-colors">About</Link></li>
+              <li><Link href="/careers" className="text-text-secondary hover:text-text-primary transition-colors">Careers</Link></li>
+              <li><Link href="/blog" className="text-text-secondary hover:text-text-primary transition-colors">Blog</Link></li>
+              <li><Link href="/contact" className="text-text-secondary hover:text-text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -129,20 +129,20 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/security" className="text-muted-foreground hover:text-foreground transition-colors">Security</Link></li>
-              <li><Link href="/legal/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy</Link></li>
-              <li><Link href="/legal/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms</Link></li>
-              <li><Link href="/trust" className="text-muted-foreground hover:text-foreground transition-colors">Trust Center</Link></li>
+              <li><Link href="/security" className="text-text-secondary hover:text-text-primary transition-colors">Security</Link></li>
+              <li><Link href="/legal/privacy" className="text-text-secondary hover:text-text-primary transition-colors">Privacy</Link></li>
+              <li><Link href="/legal/terms" className="text-text-secondary hover:text-text-primary transition-colors">Terms</Link></li>
+              <li><Link href="/trust" className="text-text-secondary hover:text-text-primary transition-colors">Trust Center</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 border-t border-border pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-text-secondary">
               © 2024 Shifa AI. All rights reserved.
             </p>
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-4 text-sm text-text-secondary">
               <span>HIPAA Compliant</span>
               <span>•</span>
               <span>SOC 2 Type II</span>
