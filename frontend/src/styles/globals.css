@@ -1,23 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Satoshi:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Primary Colors - Clinical Teal */
     --primary: 173 80% 40%;
     --primary-foreground: 210 40% 98%;
-    
-    /* Accent Colors */
     --accent: 189 94% 43%;
     --accent-foreground: 210 40% 98%;
-    
-    /* Risk Status Colors */
-    --risk-green: 142 72% 29%;
-    --risk-amber: 32 95% 44%;
-    --risk-red: 0 72% 51%;
-    
-    /* Neutral Colors */
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 215.4 16.3% 46.9%;
@@ -25,31 +17,22 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 173 80% 40%;
-
-    /* Additional surface/text tokens used by components */
     --surface: 0 0% 100%;
     --text-primary: 222.2 47.4% 11.2%;
     --text-secondary: 215 20.2% 65.1%;
-    
-    /* Card Colors */
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
-    
-    /* Semantic Colors */
     --success: 22 163 74;
     --warning: 217 119 6;
     --error: 220 38 38;
     --info: 6 182 212;
-    
-    /* Spacing Scale */
-    --radius: 0.75rem; /* 12px - rounded-xl */
-    --radius-lg: 1rem; /* 16px - rounded-2xl */
-    
-    /* Typography */
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --font-sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'DM Serif Display', serif;
+    --font-display: 'Satoshi', 'Inter', sans-serif;
   }
 
   .dark {
@@ -60,13 +43,10 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 189 94% 43%;
-
     --card: 222.2 47.4% 11.2%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 47.4% 11.2%;
     --popover-foreground: 210 40% 98%;
-
-    /* Surface/text in dark mode */
     --surface: 222.2 47.4% 11.2%;
     --text-primary: 210 40% 98%;
     --text-secondary: 215 20.2% 65.1%;
@@ -83,33 +63,54 @@
   }
   
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-text-primary antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography hierarchy */
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight text-text-primary;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight text-text-primary;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold text-text-primary;
+  }
+  
+  h4 {
+    @apply text-xl font-semibold text-text-primary;
+  }
+  
+  p {
+    @apply text-[17px] leading-8 text-text-secondary;
   }
   
   /* Focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
   
   /* Selection styles */
   ::selection {
-    @apply bg-primary/20 text-primary-foreground;
+    @apply bg-primary/20 text-white;
   }
 }
 
 @layer components {
   /* Container utilities */
   .container {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-[68rem] px-6 md:px-8;
   }
   
   .container-narrow {
-    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-4xl px-6 md:px-8;
   }
   
   .container-wide {
-    @apply mx-auto max-w-8xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-8xl px-6 md:px-8;
   }
   
   /* Section spacing */
@@ -127,20 +128,20 @@
   
   /* Typography scale */
   .text-hero {
-    @apply text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
   }
   
   .text-section {
-    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
   }
   
   .text-lead {
-    @apply text-lg text-muted-foreground sm:text-xl;
+    @apply text-lg md:text-xl leading-8;
   }
   
-  /* Button variants */
+  /* Button variants with high contrast */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:pointer-events-none disabled:opacity-50;
   }
   
   .btn-secondary {
@@ -151,13 +152,18 @@
     @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium text-text-primary transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary/40 disabled:pointer-events-none disabled:opacity-50;
   }
   
-  /* Card styles */
+  /* Card styles with high contrast */
   .card {
     @apply rounded-2xl border border-slate-200 bg-surface text-text-primary shadow-sm;
   }
   
   .card-elevated {
     @apply rounded-2xl border border-slate-200 bg-surface text-text-primary shadow-lg;
+  }
+  
+  /* White cards for colored backgrounds */
+  .card-white {
+    @apply bg-white/95 text-text-secondary rounded-2xl shadow-sm p-6 md:p-8;
   }
   
   /* Risk badge styles */
@@ -185,51 +191,7 @@
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out;
   }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
   
-  .text-pretty {
-    text-wrap: pretty;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Additional animations and micro-interactions */
-@layer components {
   /* Hover animations */
   .hover-lift {
     @apply transition-transform duration-200 hover:-translate-y-1;
@@ -241,33 +203,6 @@
   
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
-  }
-  
-  /* Button animations */
-  .btn-primary {
-    @apply transition-all duration-200 hover:shadow-md active:scale-95;
-  }
-  
-  .btn-secondary {
-    @apply transition-all duration-200 hover:shadow-md active:scale-95;
-  }
-  
-  .btn-ghost {
-    @apply transition-all duration-200 hover:shadow-sm active:scale-95;
-  }
-  
-  /* Card animations */
-  .card {
-    @apply transition-all duration-200 hover:shadow-md;
-  }
-  
-  .card-elevated {
-    @apply transition-all duration-200 hover:shadow-xl;
-  }
-  
-  /* Form focus animations */
-  input:focus, textarea:focus {
-    @apply ring-2 ring-primary/20 border-primary/50;
   }
   
   /* Staggered animation for lists */
@@ -284,28 +219,27 @@
   .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
 }
 
-/* Pulse animation for live indicators */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 1;
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
-  50% {
-    opacity: 0.8;
-    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s infinite;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Focus visible improvements */
-*:focus-visible {
-  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }

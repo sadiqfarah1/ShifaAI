@@ -1,22 +1,60 @@
-import { TriangleAlert, Target } from "lucide-react"
+import { TriangleAlert, Target, TrendingDown, DollarSign } from "lucide-react"
 
 export function ProblemSolution() {
   return (
     <section className="section bg-background">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-section text-balance">Why we're building this</h2>
-          <p className="text-lead max-w-3xl mx-auto text-muted-foreground mt-4">
-            3.8 million patients are readmitted within 30 days each year — costing the U.S. healthcare system over $26 billion annually.
+          <h2 className="text-section text-text-primary">Why It Matters</h2>
+          <p className="text-lead text-text-secondary mt-4">
+            The readmission crisis is costing hospitals billions and putting patients at risk.
           </p>
         </div>
 
-        {/* Patient story */}
-        <div className="card-elevated p-8 mb-12 bg-surface">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-text-primary">
-              “Fatima was discharged on a Friday… A week later, she was readmitted. With Shifa AI, an automated SMS caught warning signs in 48 hours — triggering a nurse intervention that prevented the readmission.”
-            </p>
+        {/* Crisis Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="card-elevated p-8 text-center bg-red-50/40 border-red-200/60">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <TrendingDown className="h-8 w-8 text-red-600" />
+              <h3 className="text-2xl font-bold text-red-600">3.8M+</h3>
+            </div>
+            <p className="text-lg font-semibold text-text-primary mb-2">Patients Readmitted</p>
+            <p className="text-text-secondary">within 30 days each year</p>
+          </div>
+          
+          <div className="card-elevated p-8 text-center bg-amber-50/40 border-amber-200/60">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <DollarSign className="h-8 w-8 text-amber-600" />
+              <h3 className="text-2xl font-bold text-amber-600">$26B+</h3>
+            </div>
+            <p className="text-lg font-semibold text-text-primary mb-2">Annual Cost</p>
+            <p className="text-text-secondary">to the U.S. healthcare system</p>
+          </div>
+        </div>
+
+        {/* Current vs Modeled Reduction */}
+        <div className="card-elevated p-8 mb-12 bg-white">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-text-primary mb-4">Current vs. Modeled Reduction</h3>
+            <p className="text-text-secondary">How automation can transform follow-up care</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-red-100 flex items-center justify-center">
+                <span className="text-3xl font-bold text-red-600">15%</span>
+              </div>
+              <h4 className="font-semibold text-text-primary mb-2">Current Readmission Rate</h4>
+              <p className="text-sm text-text-secondary">Industry average for 30-day readmissions</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                <span className="text-3xl font-bold text-green-600">9%</span>
+              </div>
+              <h4 className="font-semibold text-text-primary mb-2">With Shifa AI</h4>
+              <p className="text-sm text-text-secondary">Modeled 40% reduction in preventable readmissions</p>
+            </div>
           </div>
         </div>
 
@@ -27,15 +65,26 @@ export function ProblemSolution() {
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
                 <TriangleAlert className="h-6 w-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold">The Problem</h3>
+              <h3 className="text-xl font-semibold text-text-primary">The Problem</h3>
             </div>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-text-secondary">
               <p>
-                Every year, over 3.8 million patients in the U.S. are readmitted to the hospital within 30 days — costing the healthcare system more than $26 billion annually. Most of these readmissions aren't caused by new conditions — they happen because patients don't get the right follow-up care after leaving the hospital.
+                Most readmissions aren't caused by new conditions — they happen because patients don't get the right follow-up care after leaving the hospital.
               </p>
-              <p>
-                Nurses are overextended, care teams are understaffed, and follow-up processes are still largely manual. As a result, early warning signs are missed, and patients return to the hospital with complications that could have been prevented.
-              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
+                  <span>Missed follow-ups due to manual processes</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
+                  <span>Overextended nurses and care teams</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
+                  <span>Early warning signs go unnoticed</span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -45,15 +94,26 @@ export function ProblemSolution() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Target className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Our Solution</h3>
+              <h3 className="text-xl font-semibold text-text-primary">Our Solution</h3>
             </div>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-text-secondary">
               <p>
-                We believe there's a better way. Shifa AI is built to close this critical gap in care. By combining automated post-discharge follow-ups, AI-powered risk triage, and real-time alerts, we help care teams catch problems earlier, intervene faster, and keep patients on the path to recovery.
+                Shifa AI automates post-discharge follow-ups with AI-powered triage, helping care teams catch problems earlier and intervene faster.
               </p>
-              <p>
-                We're starting by partnering with forward-thinking hospitals and care organizations to pilot our platform, gather real-world feedback, and prove that smarter care transitions can significantly reduce readmissions — while giving clinicians more time to focus on what matters most: their patients.
-              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
+                  <span>Automated patient check-ins via SMS</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
+                  <span>AI-powered risk triage and alerts</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
+                  <span>Real-time nurse notifications</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

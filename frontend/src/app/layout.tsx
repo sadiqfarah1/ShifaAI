@@ -10,10 +10,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
+    default: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
     template: "%s | Shifa AI"
   },
-  description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts. Join our early pilot and shape the future of smarter, safer care transitions.",
+  description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
   keywords: [
     "hospital readmissions",
     "AI healthcare", 
@@ -23,7 +23,9 @@ export const metadata: Metadata = {
     "readmission reduction",
     "post-discharge care",
     "nurse alerts",
-    "AI triage"
+    "AI triage",
+    "pilot program",
+    "de-identified data"
   ],
   authors: [{ name: "Shifa AI" }],
   creator: "Shifa AI",
@@ -37,8 +39,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shifa-ai-tau.vercel.app",
     siteName: "Shifa AI",
-    title: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
-    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts.",
+    title: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
+    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
     images: [
       {
         url: "/og-image.jpg",
@@ -50,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
-    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts.",
+    title: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
+    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -80,7 +82,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#0F766E" />
+        <meta name="theme-color" content="#0D9488" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
