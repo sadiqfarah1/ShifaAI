@@ -1,4 +1,4 @@
-from pydantic_settings import BaseSettings
+from pydantic import BaseSettings
 from typing import Optional
 import os
 
@@ -8,35 +8,32 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379"
     
     # Twilio
-    twilio_account_sid: str
-    twilio_auth_token: str
-    twilio_phone_number: str
-    twilio_webhook_secret: str
+    twilio_account_sid: str = ""
+    twilio_auth_token: str = ""
+    twilio_phone_number: str = ""
+    twilio_webhook_secret: str = ""
     
     # LLM
-    openai_api_key: Optional[str] = None
-    anthropic_api_key: Optional[str] = None
-    llm_provider: str = "openai"  # or anthropic
+    openai_api_key: str = ""
+    anthropic_api_key: str = ""
     
     # Security
-    secret_key: str
-    encryption_key: str
+    secret_key: str = "your-secret-key-here"
+    encryption_key: str = "your-encryption-key-here"
+    algorithm: str = "HS256"
+    access_token_expire_minutes: int = 30
     
     # SMTP
-    smtp_host: str = "localhost"
-    smtp_port: int = 1025
-    smtp_user: str = ""
+    smtp_server: str = "smtp.gmail.com"
+    smtp_port: int = 587
+    smtp_username: str = ""
     smtp_password: str = ""
-    smtp_from: str = "noreply@ctc.com"
     
-    # App Config
-    debug: bool = True
-    local_mode: bool = False
-    nurse_phone: str
-    nurse_email: str
-    
-    # API
-    api_base_url: str = "http://localhost:8000"
+    # App
+    app_name: str = "Care Transition Companion"
+    debug: bool = False
+    nurse_phone: str = ""
+    nurse_email: str = ""
     
     class Config:
         env_file = ".env"
