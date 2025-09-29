@@ -1,28 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 import os
 from datetime import datetime
-
-# Simple models
-class PatientCreate(BaseModel):
-    name: str
-    phone: str
-    email: Optional[str] = None
-    discharge_date: str
-
-class PatientResponse(BaseModel):
-    id: int
-    name: str
-    phone: str
-    email: Optional[str] = None
-    discharge_date: str
-    created_at: datetime
-
-class MessageResponse(BaseModel):
-    message: str
-    status: str
+import json
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -57,42 +38,52 @@ async def root():
 async def health_check():
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
-@app.post("/api/patients", response_model=PatientResponse)
-async def create_patient(patient: PatientCreate):
+@app.post("/api/patients")
+async def create_patient(patient_data: Dict[str, Any]):
     """Create a new patient"""
     global patient_id_counter
     
+    # Validate required fields
+    if not patient_data.get("name") or not patient_data.get("phone"):
+        raise HTTPException(status_code=400, detail="Name and phone are required")
+    
     new_patient = {
         "id": patient_id_counter,
-        "name": patient.name,
-        "phone": patient.phone,
-        "email": patient.email,
-        "discharge_date": patient.discharge_date,
-        "created_at": datetime.now()
+        "name": patient_data["name"],
+        "phone": patient_data["phone"],
+        "email": patient_data.get("email"),
+        "discharge_date": patient_data.get("discharge_date", ""),
+        "created_at": datetime.now().isoformat()
     }
     
     patients_db.append(new_patient)
     patient_id_counter += 1
     
-    return PatientResponse(**new_patient)
+    return new_patient
 
-@app.get("/api/patients", response_model=List[PatientResponse])
+@app.get("/api/patients")
 async def get_patients():
     """Get all patients"""
-    return [PatientResponse(**patient) for patient in patients_db]
+    return patients_db
 
-@app.get("/api/patients/{patient_id}", response_model=PatientResponse)
+@app.get("/api/patients/{patient_id}")
 async def get_patient(patient_id: int):
     """Get a specific patient"""
     for patient in patients_db:
         if patient["id"] == patient_id:
-            return PatientResponse(**patient)
+            return patient
     
     raise HTTPException(status_code=404, detail="Patient not found")
 
-@app.post("/api/messages/send", response_model=MessageResponse)
-async def send_message(patient_id: int, message: str):
+@app.post("/api/messages/send")
+async def send_message(message_data: Dict[str, Any]):
     """Send a message to a patient (placeholder for Twilio integration)"""
+    patient_id = message_data.get("patient_id")
+    message = message_data.get("message")
+    
+    if not patient_id or not message:
+        raise HTTPException(status_code=400, detail="patient_id and message are required")
+    
     # Find patient
     patient = None
     for p in patients_db:
@@ -104,10 +95,11 @@ async def send_message(patient_id: int, message: str):
         raise HTTPException(status_code=404, detail="Patient not found")
     
     # TODO: Integrate with Twilio here
-    return MessageResponse(
-        message=f"Message sent to {patient['name']} at {patient['phone']}: {message}",
-        status="sent"
-    )
+    return {
+        "message": f"Message sent to {patient['name']} at {patient['phone']}: {message}",
+        "status": "sent",
+        "timestamp": datetime.now().isoformat()
+    }
 
 @app.get("/api/stats")
 async def get_stats():
@@ -117,6 +109,32 @@ async def get_stats():
         "active_patients": len(patients_db),  # All patients are active for now
         "messages_sent": 0,  # Placeholder
         "timestamp": datetime.now().isoformat()
+    }
+
+@app.get("/api/docs")
+async def get_docs():
+    """Simple API documentation"""
+    return {
+        "endpoints": {
+            "GET /": "API info",
+            "GET /health": "Health check",
+            "POST /api/patients": "Create patient (requires: name, phone)",
+            "GET /api/patients": "List all patients",
+            "GET /api/patients/{id}": "Get specific patient",
+            "POST /api/messages/send": "Send message (requires: patient_id, message)",
+            "GET /api/stats": "Get statistics",
+            "GET /api/docs": "This documentation"
+        },
+        "example_patient": {
+            "name": "John Doe",
+            "phone": "+1234567890",
+            "email": "john@example.com",
+            "discharge_date": "2025-09-28"
+        },
+        "example_message": {
+            "patient_id": 1,
+            "message": "How are you feeling today?"
+        }
     }
 
 if __name__ == "__main__":
