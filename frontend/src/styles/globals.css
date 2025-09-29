@@ -25,6 +25,11 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 173 80% 40%;
+
+    /* Additional surface/text tokens used by components */
+    --surface: 0 0% 100%;
+    --text-primary: 222.2 47.4% 11.2%;
+    --text-secondary: 215 20.2% 65.1%;
     
     /* Card Colors */
     --card: 0 0% 100%;
@@ -60,6 +65,11 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 47.4% 11.2%;
     --popover-foreground: 210 40% 98%;
+
+    /* Surface/text in dark mode */
+    --surface: 222.2 47.4% 11.2%;
+    --text-primary: 210 40% 98%;
+    --text-secondary: 215 20.2% 65.1%;
   }
 }
 
@@ -130,7 +140,7 @@
   
   /* Button variants */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-lg bg-primary text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:pointer-events-none disabled:opacity-50;
   }
   
   .btn-secondary {

@@ -10,10 +10,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Shifa AI - Healing beyond discharge",
+    default: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
     template: "%s | Shifa AI"
   },
-  description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts. Trusted by 200+ healthcare organizations.",
+  description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts. Join our early pilot and shape the future of smarter, safer care transitions.",
   keywords: [
     "hospital readmissions",
     "AI healthcare", 
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shifa-ai-tau.vercel.app",
     siteName: "Shifa AI",
-    title: "Shifa AI - Healing beyond discharge",
-    description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts.",
+    title: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
+    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts.",
     images: [
       {
         url: "/og-image.jpg",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shifa AI - Healing beyond discharge",
-    description: "Reduce hospital readmissions with automated follow-ups, AI triage, and nurse alerts.",
+    title: "Shifa AI – AI-Powered Follow-Up to Reduce 30-Day Readmissions",
+    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated post-discharge follow-ups, AI-powered triage, and real-time nurse alerts.",
     images: ["/og-image.jpg"],
   },
   robots: {

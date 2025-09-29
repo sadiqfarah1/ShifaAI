@@ -5,7 +5,7 @@ import { KPIStat } from "@/components/ui/kpi-stat"
 
 export function Hero() {
   return (
-    <section className="section-lg bg-gradient-to-br from-background to-muted/20">
+    <section className="section-lg bg-gradient-to-br from-primary/5 via-background to-muted/20">
       <div className="container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Copy */}
@@ -20,17 +20,21 @@ export function Hero() {
             </div>
             
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="#pilot" className="btn-primary inline-flex items-center justify-center">
+              <Link href="/contact" className="btn-primary inline-flex items-center justify-center">
                 Join Pilot
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link href="#talk-to-us" className="btn-secondary">
+              <Link href="/contact" className="btn-secondary">
                 Talk to Us
               </Link>
             </div>
 
+            <p className="text-sm text-muted-foreground">
+              Built with input from nurses, care coordinators, and health system leaders.
+            </p>
+
             {/* Trust indicators */}
-            <div className="flex items-center space-x-6 pt-4">
+            <div className="flex items-center space-x-6 pt-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Shield className="h-4 w-4" />
                 <span>HIPAA Compliant</span>
@@ -48,7 +52,7 @@ export function Hero() {
 
           {/* Right Column - Mock UI Panel */}
           <div className="relative">
-            <div className="card-elevated p-6 space-y-6">
+            <div className="card-elevated p-6 space-y-6 bg-surface/80 backdrop-blur">
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Alert Queue</h3>

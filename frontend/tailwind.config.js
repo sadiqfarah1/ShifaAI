@@ -41,6 +41,11 @@ module.exports = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        surface: 'hsl(var(--surface))',
+        text: {
+          primary: 'hsl(var(--text-primary))',
+          secondary: 'hsl(var(--text-secondary))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -50,4 +55,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} 

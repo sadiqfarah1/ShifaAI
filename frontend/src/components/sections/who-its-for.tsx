@@ -1,4 +1,4 @@
-import { Building2, Users, Navigation, Heart } from "lucide-react"
+import { Building2, Users, Navigation, Heart, TrendingDown, Rocket, Sparkles } from "lucide-react"
 
 export function WhoItsFor() {
   const audiences = [
@@ -20,6 +20,12 @@ export function WhoItsFor() {
       description: "Automate outreach and streamline communication with patients while maintaining a personal, human touch.",
       benefits: ["Automate outreach", "Streamline communication", "Maintain human touch"]
     }
+  ]
+
+  const kpis = [
+    { icon: TrendingDown, label: "Modeled reduction", value: "Up to 40%" },
+    { icon: Rocket, label: "Time to pilot", value: "< 2 weeks" },
+    { icon: Sparkles, label: "Built with", value: "clinician input" },
   ]
 
   return (
@@ -54,6 +60,24 @@ export function WhoItsFor() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* KPI strip */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-12">
+          {kpis.map((item, i) => {
+            const Icon = item.icon
+            return (
+              <div key={i} className="card p-4 flex items-center justify-between hover-lift">
+                <div className="flex items-center space-x-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="text-sm text-muted-foreground">{item.label}</div>
+                </div>
+                <div className="text-base font-semibold">{item.value}</div>
               </div>
             )
           })}

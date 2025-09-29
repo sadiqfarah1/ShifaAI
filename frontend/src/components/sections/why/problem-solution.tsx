@@ -6,6 +6,18 @@ export function ProblemSolution() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-section text-balance">Why we're building this</h2>
+          <p className="text-lead max-w-3xl mx-auto text-muted-foreground mt-4">
+            3.8 million patients are readmitted within 30 days each year — costing the U.S. healthcare system over $26 billion annually.
+          </p>
+        </div>
+
+        {/* Patient story */}
+        <div className="card-elevated p-8 mb-12 bg-surface">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-lg text-text-primary">
+              “Fatima was discharged on a Friday… A week later, she was readmitted. With Shifa AI, an automated SMS caught warning signs in 48 hours — triggering a nurse intervention that prevented the readmission.”
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-stagger">

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Heart, Menu, X } from "lucide-react"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -20,6 +21,22 @@ export function Layout({ children }: LayoutProps) {
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  const navLink = (href: string, label: string) => {
+    const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href)
+    return (
+      <Link
+        href={href}
+        className={
+          `relative text-sm font-medium transition-colors ${isActive ? "text-text-primary" : "text-text-secondary hover:text-text-primary"} ` +
+          "after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-200 hover:after:w-full"
+        }
+      >
+        {label}
+      </Link>
+    )
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
@@ -33,21 +50,11 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/why" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-              Why We’re Building This
-            </Link>
-            <Link href="/who" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-              Who It’s For
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-              About Us
-            </Link>
-            <Link href="/contact" className="btn-primary">
-              Join Pilot
-            </Link>
+            {navLink("/", "Home")}
+            {navLink("/why", "Why")}
+            {navLink("/who", "Who")}
+            {navLink("/about", "About")}
+            <Link href="/contact" className="btn-primary">Join Pilot</Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,21 +71,11 @@ function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/why" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-                Why We’re Building This
-              </Link>
-              <Link href="/who" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-                Who It’s For
-              </Link>
-              <Link href="/about" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-                About Us
-              </Link>
-              <Link href="/contact" className="btn-primary w-fit">
-                Join Pilot
-              </Link>
+              {navLink("/", "Home")}
+              {navLink("/why", "Why")}
+              {navLink("/who", "Who")}
+              {navLink("/about", "About")}
+              <Link href="/contact" className="btn-primary w-fit">Join Pilot</Link>
             </nav>
           </div>
         )}
