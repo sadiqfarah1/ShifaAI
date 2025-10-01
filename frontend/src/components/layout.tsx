@@ -143,6 +143,16 @@ function Footer() {
           </div>
         </div>
 
+        {/* Mission Statement */}
+        <div className="mt-8 border-t border-border pt-8">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-semibold text-text-primary mb-2">Built to keep healing connected.</h3>
+            <p className="text-text-secondary max-w-3xl mx-auto">
+              Shifa AI empowers care teams to support patients beyond discharge — bridging the gap between hospital and home with empathy, intelligence, and trust.
+            </p>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="mt-8 border-t border-border pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">

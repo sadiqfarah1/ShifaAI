@@ -8,9 +8,9 @@ export default function AboutPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-section text-text-primary">Our Mission: Closing the Post-Discharge Gap</h1>
+              <h1 className="text-section text-text-primary">Healing doesn't end at discharge — and neither should care.</h1>
               <p className="text-lead text-text-secondary">
-                We're building the future of care transitions — where no patient falls through the cracks.
+                Shifa — meaning healing, cure, and relief in Arabic — embodies our mission to extend care beyond hospital walls. Technology should amplify the human touch, not replace it.
               </p>
             </div>
 
@@ -22,12 +22,10 @@ export default function AboutPage() {
                   <h2 className="text-2xl font-semibold text-text-primary">Our Mission</h2>
                 </div>
                 <p className="text-lg text-text-primary mb-6">
-                  Make every transition of care safer, smarter, and more human. We're creating technology to bridge the gap after discharge, 
-                  ensuring patients get the support they need when they need it most.
+                  We help care teams stay connected when patients need them most, combining empathetic communication with intelligent automation to catch complications early and guide recovery at home.
                 </p>
                 <p className="text-text-secondary">
-                  Most readmissions happen not because patients are untreatable — but because follow-up care is missed. 
-                  Shifa AI exists to change that.
+                  Built with care, for those who give it: Shifa AI was designed with input from clinicians, nurses, and health leaders. Every feature reflects real-world needs — from personal follow-ups to intuitive alerting — so no patient falls through the cracks.
                 </p>
               </div>
             </div>
@@ -41,14 +39,12 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-text-primary mb-4">Founder's Note</h3>
+                  <h3 className="text-xl font-semibold text-text-primary mb-4">Built with care, for those who give it</h3>
                   <blockquote className="text-lg text-text-primary italic mb-4">
-                    "No patient should return to the hospital simply because they weren't checked on. Shifa AI helps care teams 
-                    catch warning signs early, intervene faster, and deliver better outcomes — while reducing the burden on staff."
+                    "Every readmission is more than a statistic — it's a life interrupted. We're building technology that helps care teams stay connected when patients need them most, combining empathy with intelligence to catch complications early and guide recovery at home."
                   </blockquote>
                   <p className="text-text-secondary">
-                    We're partnering with health systems and care teams who share this vision. If you'd like to help shape the product 
-                    and join our pilot, we'd love to hear from you.
+                    Shifa AI was designed with input from clinicians, nurses, and health leaders. Every feature reflects real-world needs — from personal follow-ups to intuitive alerting — so no patient falls through the cracks.
                   </p>
                 </div>
               </div>

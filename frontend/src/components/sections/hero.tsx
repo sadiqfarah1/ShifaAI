@@ -45,18 +45,15 @@ export function Hero() {
 
             {/* Main headline */}
             <h1 className="text-hero font-serif text-text-primary leading-tight">
-              Healing beyond discharge —{" "}
+              Healing beyond discharge.{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                AI-powered care transitions
-              </span>{" "}
-              that prevent readmissions.
+                Empowering care that continues at home.
+              </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lead text-text-secondary max-w-2xl leading-relaxed">
-              Shifa AI helps care teams catch complications earlier, automate follow-ups, 
-              and keep patients on the path to recovery — using only de-identified data 
-              in early pilots.
+              Every readmission is more than a statistic — it's a life interrupted. Shifa AI helps care teams stay connected after patients leave the hospital, catching complications early and ensuring recovery happens where it matters most: at home.
             </p>
 
             {/* CTA buttons */}
@@ -74,7 +71,7 @@ export function Hero() {
                 href="mailto:hello@shifa-ai.com?subject=Pilot Inquiry" 
                 className="btn-secondary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl hover:scale-105 transition-all duration-200"
               >
-                Talk to Us
+                Talk to Our Team
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>

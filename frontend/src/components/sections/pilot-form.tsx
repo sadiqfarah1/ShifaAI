@@ -50,10 +50,10 @@ export function PilotForm() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-section text-white mb-4">
-              Partner With Us to Shape the Future of Post-Discharge Care
+              🚀 Partner with us to shape the future of post-discharge care
             </h2>
             <p className="text-lead text-white/90">
-              We're seeking pilot partners to test Shifa AI with de-identified data while we build toward full HIPAA compliance.
+              We're inviting a small group of hospitals, clinics, and care teams to join our early-access pilot. Together, we'll refine Shifa AI's platform to reduce readmissions, improve patient outcomes, and bring healing beyond discharge.
             </p>
           </div>
 
@@ -133,7 +133,7 @@ export function PilotForm() {
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2">
                       <MessageSquare className="inline h-4 w-4 mr-2" />
-                      Message
+                      What's your biggest challenge with post-discharge care?
                     </label>
                     <textarea
                       id="message"
@@ -151,7 +151,7 @@ export function PilotForm() {
                   type="submit"
                   className="w-full bg-primary text-white hover:bg-primaryDark inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
-                  Request Pilot Access
+                  Join the Pilot
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
               </form>

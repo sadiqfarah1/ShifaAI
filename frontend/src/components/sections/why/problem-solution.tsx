@@ -7,7 +7,7 @@ export function ProblemSolution() {
         <div className="text-center mb-12">
           <h2 className="text-section text-text-primary">Why It Matters</h2>
           <p className="text-lead text-text-secondary mt-4">
-            The readmission crisis is costing hospitals billions and putting patients at risk.
+            Every readmission is more than a cost — it's a story interrupted.
           </p>
         </div>
 
@@ -16,10 +16,10 @@ export function ProblemSolution() {
           <div className="card-elevated p-8 text-center bg-red-50/40 border-red-200/60">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <TrendingDown className="h-8 w-8 text-red-600" />
-              <h3 className="text-2xl font-bold text-red-600">3.8M+</h3>
+              <h3 className="text-2xl font-bold text-red-600">1 in 5</h3>
             </div>
             <p className="text-lg font-semibold text-text-primary mb-2">Patients Readmitted</p>
-            <p className="text-text-secondary">within 30 days each year</p>
+            <p className="text-text-secondary">within 30 days — nearly 3.8M lives disrupted annually</p>
           </div>
           
           <div className="card-elevated p-8 text-center bg-amber-50/40 border-amber-200/60">
@@ -28,15 +28,15 @@ export function ProblemSolution() {
               <h3 className="text-2xl font-bold text-amber-600">$26B+</h3>
             </div>
             <p className="text-lg font-semibold text-text-primary mb-2">Annual Cost</p>
-            <p className="text-text-secondary">to the U.S. healthcare system</p>
+            <p className="text-text-secondary">and countless families under stress</p>
           </div>
         </div>
 
         {/* Current vs Modeled Reduction */}
         <div className="card-elevated p-8 mb-12 bg-white">
           <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">Current vs. Modeled Reduction</h3>
-            <p className="text-text-secondary">How automation can transform follow-up care</p>
+            <h3 className="text-xl font-semibold text-text-primary mb-4">The Human Impact</h3>
+            <p className="text-text-secondary">When a patient returns within weeks, it's not just a data point — it's a disrupted life and a family under stress.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -45,7 +45,7 @@ export function ProblemSolution() {
                 <span className="text-3xl font-bold text-red-600">15%</span>
               </div>
               <h4 className="font-semibold text-text-primary mb-2">Current Readmission Rate</h4>
-              <p className="text-sm text-text-secondary">Industry average for 30-day readmissions</p>
+              <p className="text-sm text-text-secondary">Follow-up is often manual and inconsistent</p>
             </div>
             
             <div className="text-center">
@@ -53,7 +53,7 @@ export function ProblemSolution() {
                 <span className="text-3xl font-bold text-green-600">9%</span>
               </div>
               <h4 className="font-semibold text-text-primary mb-2">With Shifa AI</h4>
-              <p className="text-sm text-text-secondary">Modeled 40% reduction in preventable readmissions</p>
+              <p className="text-sm text-text-secondary">Gentle, consistent care that catches early warning signs</p>
             </div>
           </div>
         </div>
@@ -65,24 +65,24 @@ export function ProblemSolution() {
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
                 <TriangleAlert className="h-6 w-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold text-text-primary">The Problem</h3>
+              <h3 className="text-xl font-semibold text-text-primary">The Challenge</h3>
             </div>
             <div className="space-y-4 text-text-secondary">
               <p>
-                Most readmissions aren't caused by new conditions — they happen because patients don't get the right follow-up care after leaving the hospital.
+                When a patient returns within weeks, it's not just a data point — it's a disrupted life and a family under stress.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
-                  <span>Missed follow-ups due to manual processes</span>
+                  <span>Nurses juggle too many patients to catch every early warning sign</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
-                  <span>Overextended nurses and care teams</span>
+                  <span>Subtle symptoms go unnoticed until they become emergencies</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-red-400 rounded-full flex-shrink-0 mt-2" />
-                  <span>Early warning signs go unnoticed</span>
+                  <span>Follow-up is often manual and inconsistent</span>
                 </li>
               </ul>
             </div>
@@ -94,26 +94,31 @@ export function ProblemSolution() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Target className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-text-primary">Our Solution</h3>
+              <h3 className="text-xl font-semibold text-text-primary">Our Mission</h3>
             </div>
             <div className="space-y-4 text-text-secondary">
               <p>
-                Shifa AI automates post-discharge follow-ups with AI-powered triage, helping care teams catch problems earlier and intervene faster.
+                Help care teams stay connected when patients need them most — after they leave the hospital.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span>Automated patient check-ins via SMS</span>
+                  <span>Gentle, human-sounding check-ins (24h, 3d, 7d, 14d)</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span>AI-powered risk triage and alerts</span>
+                  <span>Clear risk classification (Green / Yellow / Red)</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span>Real-time nurse notifications</span>
+                  <span>Real-time alerts that fit existing workflows</span>
                 </li>
               </ul>
+              <div className="mt-4 p-3 bg-primary/10 rounded-lg">
+                <p className="text-sm font-medium text-primary">
+                  The result: fewer readmissions, stronger patient relationships, and safer recoveries.
+                </p>
+              </div>
             </div>
           </div>
         </div>
