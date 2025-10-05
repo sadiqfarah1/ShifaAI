@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "../styles/globals.css"
+import { COPY } from "@/copy/shifa"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -10,10 +11,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
+    default: COPY.seo.title,
     template: "%s | Shifa AI"
   },
-  description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
+  description: COPY.seo.description,
   keywords: [
     "hospital readmissions",
     "AI healthcare", 
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shifa-ai-tau.vercel.app",
     siteName: "Shifa AI",
-    title: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
-    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
+    title: COPY.seo.title,
+    description: COPY.seo.description,
     images: [
       {
         url: "/og-image.jpg",
@@ -52,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shifa AI – Pilot-Ready AI Platform to Reduce 30-Day Readmissions",
-    description: "Shifa AI helps hospitals and care teams reduce preventable readmissions with automated follow-ups, AI triage, and nurse alerts — all using de-identified data during early pilots.",
+    title: COPY.seo.title,
+    description: COPY.seo.description,
     images: ["/og-image.jpg"],
   },
   robots: {

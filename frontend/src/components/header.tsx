@@ -18,8 +18,8 @@ export function Header() {
         </div>
         
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link href="/solutions/care-transitions" className="transition-colors hover:text-teal-600">
-            Solutions
+          <Link href="/mission" className="transition-colors hover:text-teal-600">
+            Mission
           </Link>
           <Link href="/product" className="transition-colors hover:text-teal-600">
             Product

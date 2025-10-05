@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { COPY } from "@/copy/shifa"
 
 export function Footer() {
   return (
@@ -43,9 +44,12 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-slate-200">
-          <p className="text-sm text-slate-600 text-center">
-            © 2024 Shifa AI. All rights reserved.
-          </p>
+          <div className="text-sm text-slate-600 text-center space-y-2">
+            <p>© 2024 Shifa AI. All rights reserved.</p>
+            <p className="text-xs text-slate-500">
+              {COPY.footer.hipaa}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
