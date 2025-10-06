@@ -1,7 +1,7 @@
 export const COPY = {
   hero: {
-    title: "AI-powered follow-ups that reduce preventable readmissions.",
-    sub: "We automate post-discharge outreach, flag risk early, and guide patients through recovery.",
+    title: "Empowering care beyond discharge with AI.",
+    sub: "Shifa AI helps healthcare teams cut preventable readmissions, improve follow-ups, and support patients through recovery — every step of the way.",
     ctaPrimary: "Join Pilot",
     ctaSecondary: "See How It Works",
   },
